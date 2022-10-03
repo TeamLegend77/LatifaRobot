@@ -118,7 +118,6 @@ buttons = [
         InlineKeyboardButton(text="🎵 ᴍᴜꜱɪᴄ 🎵", callback_data="music_"),
     ],
     [
-        
         InlineKeyboardButton(text="🔰 ᴀʟʟ ᴄᴏᴍᴍᴀɴᴅs 🔰", callback_data="help_back"),
     ],
     [],
@@ -245,15 +244,13 @@ def start(update: Update, context: CallbackContext):
                 "CAACAgUAAx0CYY7V0QABCOJkYvx6ho2RZrfq2H4-mgRPFu7hYTAAAi8BAAI4pUIk2LYJLb1BKroeBA"
             )
             update.effective_message.reply_text(
-
-
                 reply_markup=InlineKeyboardMarkup(buttons),
                 parse_mode=ParseMode.MARKDOWN,
                 timeout=60,
             )
     else:
         update.effective_message.reply_photo(
-            START_IMG, 
+            START_IMG,
             caption="ɪ ᴀᴍ ᴀʟɪᴠᴇ ʙᴀʙʏ !\n<b>ɪ ᴅɪᴅɴ'ᴛ sʟᴇᴘᴛ sɪɴᴄᴇ​:</b> <code>{}</code>".format(
                 uptime
             ),
